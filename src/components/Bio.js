@@ -15,9 +15,10 @@ function Bio() {
             style={{
               display: `flex`,
               marginBottom: rhythm(2.5),
+              height: `100vh`
             }}
           >
-            <Image
+            {/* <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
@@ -29,14 +30,33 @@ function Bio() {
               imgStyle={{
                 borderRadius: `50%`,
               }}
-            />
+            /> */}
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+               {/* Hi, I am <strong>{author}</strong>.  */}
+               <br />I live and work in <strong>London</strong> currently, but I love to travel when I can.   
+               <br />I make frontends.  
+               <br />Currently using <strong>React</strong> as my primary Language library/framework. 
+             
+              
+              <br />
+              <br />
+              <div>
+              You should follow me on {' '}
+              <a  href={`https://twitter.com/${social.twitter}`}>
+              Twitter
               </a>
+              {' '}
+              or drop me a {' '}
+              <a  href='mailto:davidmitten@gmail.com'>
+              message
+              </a>.
+              </div>
+              <br />
+              <div>  This site was created using {' '}  
+              <a href='https://www.gatsbyjs.org/'>
+              Gatsby JS
+              </a>
+              </div>
             </p>
           </div>
         )

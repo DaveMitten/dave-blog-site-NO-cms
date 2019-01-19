@@ -26,7 +26,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            Hi, <br /> My name is {title}
           </Link>
         </h1>
       )
@@ -46,7 +46,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+           {title}'s Blog
           </Link>
         </h3>
       )
