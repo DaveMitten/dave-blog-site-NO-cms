@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Dave`,
     author: `David James Mitten`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Personal Blog for David James Mitten`,
+    siteUrl: ``,
     social: {
       twitter: `DavidJamesMitt1`
         },

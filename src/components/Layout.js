@@ -46,7 +46,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-           {title}'s Blog
+         <button style={{ backgroundColor: 'lightgrey'}}>Home</button>
           </Link>
         </h3>
       )
