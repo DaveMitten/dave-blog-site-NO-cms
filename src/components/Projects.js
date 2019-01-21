@@ -55,8 +55,8 @@ class Projects extends Component {
         tech: ['Javascript', 'React', 'HTML', 'CSS', 'Netlify'],
         description: 'the stuff i did',
         links: {
-          github: 'github address',
-          web: 'web address',
+          github: 'https://github.com/DaveMitten/magic-8-ball',
+          web: '#',
         },
       },
       {

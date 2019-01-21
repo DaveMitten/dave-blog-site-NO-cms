@@ -4,8 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 
 // import { rhythm } from '../utils/typography'
 
-
-
 function Bio() {
   return (
     <StaticQuery
@@ -18,7 +16,7 @@ function Bio() {
               display: `flex`,
               /* marginBottom: rhythm(2.5), */
               flexDirection: `column`,
-              height:'700px'
+              height: '700px',
             }}
           >
             {/* <Image
@@ -46,21 +44,62 @@ function Bio() {
               <br />
               <div>
                 You should follow me on{' '}
-                <a className='aLinkStyle' href={`https://twitter.com/${social.twitter}`}>Twitter</a> or
-                drop me a <a className='aLinkStyle' href="mailto:davidmitten@gmail.com">message</a>.
+                <a
+                  className="aLinkStyle"
+                  href={`https://twitter.com/${social.twitter}`}
+                >
+                  Twitter
+                </a>{' '}
+                or drop me a{' '}
+                <a className="aLinkStyle" href="mailto:davidmitten@gmail.com">
+                  message
+                </a>
+                .
               </div>
               <br />
               <div>
                 {' '}
                 This site was created using{' '}
-                <a className='aLinkStyle' href="https://www.gatsbyjs.org/">Gatsby JS</a>
+                <a className="aLinkStyle" href="https://www.gatsbyjs.org/">
+                  Gatsby JS
+                </a>
               </div>
             </p>
-            <button
+            {/* <button
               className='buttonStyle'
             >
               <div className='buttonInnerStyle'>Projects</div>
-            </button>
+            </button> */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                height: '1px',
+                marginTop: '50px',
+              }}
+            >
+              <div
+                style={{
+                  borderBottom: '2px dashed black',
+                  width: '40%',
+                  textAlign: 'center',
+                }}
+              >
+                Projects
+              </div>
+              <div style={{ textAlign: 'center', width: '5%' }}>
+                <span>&#8595;</span>
+              </div>
+              <div
+                style={{
+                  borderBottom: '2px dashed black',
+                  width: '40%',
+                  textAlign: 'center',
+                }}
+              >
+                Blog
+              </div>
+            </div>
           </div>
         )
       }}
