@@ -13,6 +13,13 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
+    const blogListStyle = {
+      height: '100vh',
+      overflow: 'auto',
+      border: '2px solid black',
+      padding: '15px',
+      marginBottom: '20'
+    }
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -21,6 +28,10 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         <Projects />
+        <div style={{margin: 'auto'}}>
+
+        <h2 style={{borderBottom: '2px solid black'}}>Blog posts</h2>
+        <div>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -39,6 +50,8 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+        </div>
+        </div>
       </Layout>
     )
   }

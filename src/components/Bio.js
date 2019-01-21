@@ -17,9 +17,8 @@ function Bio() {
             style={{
               display: `flex`,
               /* marginBottom: rhythm(2.5), */
-              /* height: `100vh`,  */
               flexDirection: `column`,
-              marginBottom: 50
+              height:'700px'
             }}
           >
             {/* <Image
