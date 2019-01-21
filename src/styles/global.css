@@ -1,5 +1,7 @@
 /* <=========== global style ===========> */
-
+body{
+  cursor: default;
+}
 a{
 	color: #007acc;
 
