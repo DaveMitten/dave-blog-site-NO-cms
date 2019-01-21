@@ -35,7 +35,8 @@ a{
 
 /* <============= projects ==============> */
 
-#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3 {
+#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3, 
+#___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a, #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a {
 	color: #007acc;
 	border-radius: 5px;
 	box-shadow: none;
@@ -44,11 +45,13 @@ a{
 
 }
 
-#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3:hover{
+#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3:hover, 
+#___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a:hover, #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a:hover{
 	background-color: #007acc;
 	color: white;
 	transition: 0.1s;
 	width: fit-content;
 
 }
+
 
