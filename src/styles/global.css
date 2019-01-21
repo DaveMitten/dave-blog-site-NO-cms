@@ -1,0 +1,54 @@
+/* <=========== global style ===========> */
+
+a{
+	color: #007acc;
+
+}
+
+/* <==========buttons and links ================> */
+.buttonStyle {
+  width: 100px;
+  border: 2px solid;
+  margin: 40px auto 0 auto;
+  cursor: pointer;
+  padding: 0;
+}
+
+.buttonInnerStyle:hover {
+  background-color: #007acc;
+  transition: 0.2s;
+  color: white;
+}
+
+.aLinkStyle {
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 4px;
+}
+
+.aLinkStyle:hover {
+  background-color: #007acc;
+  color: white;
+  transition: 0.1s;
+}
+
+
+/* <============= projects ==============> */
+
+#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3 {
+	color: #007acc;
+	border-radius: 5px;
+	box-shadow: none;
+	padding: 4px;
+	cursor: pointer;
+
+}
+
+#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3:hover{
+	background-color: #007acc;
+	color: white;
+	transition: 0.1s;
+	width: fit-content;
+
+}
+

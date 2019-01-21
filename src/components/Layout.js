@@ -26,7 +26,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            Hi, <br /> My name is {title}
+            Hi, <br />I'm {title}
           </Link>
         </h1>
       )
@@ -46,7 +46,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-         <button style={{ backgroundColor: 'lightgrey'}}>Home</button>
+         <button className='aLinkStyle'>Home</button>
           </Link>
         </h3>
       )
@@ -62,10 +62,10 @@ class Layout extends React.Component {
       >
         {header}
         {children}
-        <footer>
+        <footer >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a  className='aLinkStyle' href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
     )
