@@ -66,7 +66,7 @@ class Projects extends Component {
         description: 'the stuff i did',
         links: {
           github: 'https://github.com/DaveMitten/magic-8-ball',
-          web: '#',
+          web: 'WIP (work in progress)',
         },
       },
 
@@ -102,7 +102,7 @@ class Projects extends Component {
                     if (arr.length - 1 === i) {
                       return <div key={i}>{tech}.</div>
                     } else {
-                      return <div key={i}>{tech}||</div>
+                      return <div key={i}>{`${tech}, `}</div>
                     }
                   })}
                 </div>
