@@ -55,7 +55,8 @@ function Bio() {
                   message
                 </a>
                 .
-              </div>
+              {/* </div>
+              <div>If you're interested, you cantake a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
               <br />
               <div>
                 {' '}

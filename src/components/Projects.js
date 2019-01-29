@@ -46,15 +46,6 @@ class Projects extends Component {
         tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
         description: 'the stuff i did',
         links: {
-          github: 'https://github.com/DaveMitten/WDI-project-4-client',
-          web: 'https://still-beach-31973.herokuapp.com/',
-        },
-      },
-      {
-        title: 'Ask A Question',
-        tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
-        description: 'the stuff i did',
-        links: {
           github: 'https://github.com/DaveMitten/wdi-project-2',
           web: 'https://shielded-sea-54903.herokuapp.com/',
         },
