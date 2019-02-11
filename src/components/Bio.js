@@ -51,7 +51,7 @@ function Bio() {
                   Twitter
                 </a>{' '}
                 or drop me a{' '}
-                <a className="aLinkStyle" href="mailto:davidmitten@gmail.com">
+                <a className="aLinkStyle" href="mailto:davidmitten88@gmail.com">
                   message
                 </a>
                 .
