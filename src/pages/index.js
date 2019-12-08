@@ -22,15 +22,21 @@ class BlogIndex extends React.Component {
     }
     return (
       <Layout location={this.props.location} title={siteTitle}>
+
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+
         <Bio />
         <Projects />
         <div style={{margin: 'auto'}}>
 
+
+
         <h2 style={{borderBottom: '2px solid black'}}>Blog posts</h2>
+
+        
         <div>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

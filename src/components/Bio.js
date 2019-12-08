@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 // import { rhythm } from '../utils/typography'
 
-function Bio() {
+export default function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
@@ -32,7 +32,7 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            <p style={{ marginBottom: 40 }}>
+            <div style={{ marginBottom: 40 }}>
               {/* Hi, I am <strong>{author}</strong>.  */}
               <br />I live and work in <strong>London</strong> currently, but I
               love to travel when I can.
@@ -57,58 +57,58 @@ function Bio() {
                 .
               {/* </div>
               <div>If you're interested, you cantake a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
-              <br />
-              <div>
-                {' '}
-                This site was created using{' '}
-                <a className="aLinkStyle" href="https://www.gatsbyjs.org/">
-                  Gatsby JS
+                <br />
+                <div>
+                  {' '}
+                  This site was created using{' '}
+                  <a className="aLinkStyle" href="https://www.gatsbyjs.org/">
+                    Gatsby JS
                 </a>
+                </div>
               </div>
-            </p>
-            {/* <button
+              {/* <button
               className='buttonStyle'
             >
               <div className='buttonInnerStyle'>Projects</div>
             </button> */}
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                height: '1px',
-                marginTop: '50px',
-              }}
-            >
               <div
                 style={{
-                  borderBottom: '2px dashed black',
-                  width: '40%',
-                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  height: '1px',
+                  marginTop: '50px',
                 }}
               >
-                Projects
+                <div
+                  style={{
+                    borderBottom: '2px dashed black',
+                    width: '40%',
+                    textAlign: 'center',
+                  }}
+                >
+                  Projects
               </div>
-              <div style={{ textAlign: 'center', width: '5%' }}>
-                <span>&#8595;</span>
+                <div style={{ textAlign: 'center', width: '20%' }}>
+                  <span>&#8595;</span>
+                </div>
+                <div
+                  style={{
+                    borderBottom: '2px dashed black',
+                    width: '40%',
+                    textAlign: 'center',
+                  }}
+                >
+                  Blog
               </div>
-              <div
-                style={{
-                  borderBottom: '2px dashed black',
-                  width: '40%',
-                  textAlign: 'center',
-                }}
-              >
-                Blog
               </div>
             </div>
-          </div>
-        )
-      }}
-    />
-  )
-}
-
-const bioQuery = graphql`
+            )
+          }}
+        />
+      )
+    }
+    
+{/* const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
@@ -125,7 +125,6 @@ const bioQuery = graphql`
         }
       }
     }
-  }
-`
+  }` */}
 
-export default Bio
+
