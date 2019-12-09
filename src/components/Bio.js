@@ -1,5 +1,9 @@
 import React from 'react'
+
 import { StaticQuery, graphql } from 'gatsby'
+
+import TechUsed from '../components/TechUsed'
+
 // import Image from 'gatsby-image'
 
 // import { rhythm } from '../utils/typography'
@@ -24,6 +28,7 @@ function Bio() {
               flexDirection: `column`,
               alignItems: `center`,
               height: '100vh',
+              textAlign: 'center',
             }}
           >
             {/* <Image
@@ -71,6 +76,7 @@ function Bio() {
             >
               <div className='buttonInnerStyle'>Projects</div>
             </button> */}
+            <TechUsed />
               <div
                 style={{
                   display: 'flex',
