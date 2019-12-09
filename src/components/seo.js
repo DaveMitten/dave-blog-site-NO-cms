@@ -69,8 +69,8 @@ function SEO({ description, lang, meta, keywords, title }) {
               rel="stylesheet"
               href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
             ></link>
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            {/* <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
 
           </Helmet>
         )
