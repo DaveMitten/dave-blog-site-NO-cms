@@ -22,7 +22,7 @@ export default function TechUsed() {
 				<i
 					data-aos="zoom-in"
 					data-aos-duration="3000"
-					style={{ fontSize: '3rem', margin: '5px' }}
+					style={{ fontSize: '3rem', margin: '20px 5px' }}
 					className="devicon-react-original"
 				/>
 				<i
