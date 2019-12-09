@@ -1,10 +1,9 @@
 /* <=========== global style ===========> */
-body{
+body {
   cursor: default;
 }
-a{
-	color: #8C52FC;
-
+a {
+  color: #8c52fc;
 }
 
 /* <==========buttons and links ================> */
@@ -17,7 +16,7 @@ a{
 }
 
 .buttonInnerStyle:hover {
-  background-color: #8C52FC;
+  background-color: #8c52fc;
   transition: 0.2s;
   color: white;
 }
@@ -29,31 +28,78 @@ a{
 }
 
 .aLinkStyle:hover {
-  background-color: #8C52FC;
+  background-color: #8c52fc;
   color: white;
   transition: 0.1s;
 }
 
-
 /* <============= projects ==============> */
 
-#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3, 
-#___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a, #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a {
-	color: #8C52FC;
-	border-radius: 5px;
-	box-shadow: none;
-	padding: 4px;
-	cursor: pointer;
-
+#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3,
+#___gatsby
+  > div
+  > div
+  > div:nth-child(n)
+  > div
+  > div:nth-child(n)
+  > div:nth-child(n)
+  > a,
+#___gatsby
+  > div
+  > div
+  > div:nth-child(n)
+  > div
+  > div:nth-child(n)
+  > div:nth-child(n)
+  > a {
+  color: #8c52fc;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 4px;
+  cursor: pointer;
 }
 
-#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3:hover, 
-#___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a:hover, #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a:hover{
-	background-color: #8C52FC;
-	color: white;
-	transition: 0.1s;
-	width: fit-content;
-
+#___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3:hover,
+#___gatsby
+  > div
+  > div
+  > div:nth-child(n)
+  > div
+  > div:nth-child(n)
+  > div:nth-child(n)
+  > a:hover,
+#___gatsby
+  > div
+  > div
+  > div:nth-child(n)
+  > div
+  > div:nth-child(n)
+  > div:nth-child(n)
+  > a:hover {
+  background-color: #8c52fc;
+  color: white;
+  transition: 0.1s;
+  width: fit-content;
 }
 
+@keyframes bounceKeyFrame {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounceKeyFrameWeb {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
 
+.bounce {
+  animation: bounceKeyFrame 1s infinite alternate;
+  -webkit-animation: bounceKeyFrameWeb 1s infinite alternate;
+}

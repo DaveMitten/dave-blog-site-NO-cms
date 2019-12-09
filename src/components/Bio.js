@@ -11,42 +11,6 @@ function Bio() {
   // const blg = useRef(null);
   // const blgSection =  this.blg.current;
   // onClick={() => projSection.scrollIntoView()}
-
-//   const bounce = {
-//     animation: bounceKeyFrame 1s infinite alternate;
-//     WebkitTransition: bounceKeyFrameWeb 1s infinite alternate;
-//   }
-
-//   const bounceKeyFrame = `
-//   @keyframes bounce {
-//     from {
-//       transform: translateY(0px);
-//     }
-//     to {
-//       transform: translateY(-15px);
-//     }
-//   }
-//   @-webkit-keyframes bounce {
-//     from {
-//       transform: translateY(0px);
-//     }
-//     to {
-//       transform: translateY(-15px);
-//     }
-//   }
-// `
-//   const bounceKeyFrameWeb = `
-//   @-webkit-keyframes bounce {
-//     from {
-//       transform: translateY(0px);
-//     }
-//     to {
-//       transform: translateY(-15px);
-//     }
-//   }`
-
-
-
   return (
     <StaticQuery
       query={bioQuery}
@@ -75,7 +39,8 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            <div style={{ marginBottom: 40 }}>
+            <div data-aos="zoom-in" data-aos-duration="1000"
+              style={{ marginBottom: 40 }}>
               {/* Hi, I am <strong>{author}</strong>.  */}
               <br />I live and work in <strong>London</strong> currently, but I
               love to travel when I can.
@@ -124,8 +89,8 @@ function Bio() {
                 >
                   {/* Projects */}
                 </div>
-                <div  style={{ textAlign: 'center', width: '20%' }}>
-                  <span>&#8595;</span>
+                <div className="bounce" style={{ textAlign: 'center', width: '20%' }}>
+                  <span >&#8595;</span>
                 </div>
                 <div
                   style={{

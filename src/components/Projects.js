@@ -4,73 +4,73 @@ import React, { Component } from 'react'
 
 class Projects extends Component {
   render() {
-    const projectData = [
-      {
-        title: 'Note App',
-        tech: ['Javascript', 'React', 'HTML', 'CSS', 'Slate JS', 'Netlify'],
-        description: 'the stuff i did',
-        links: {
-          github: 'https://github.com/DaveMitten/note_app',
-          web: 'https://awesome-raman-4a10cc.netlify.com/',
-        },
-      },
-      {
-        title: 'Lifestyle',
-        tech: ['Javascript', 'React', 'HTML', 'CSS'],
-        description: 'the stuff i did',
-        links: {
-          github: 'https://github.com/DaveMitten/k_and_d_proj_new',
-          web: '#',
-        },
-      },
-      {
-        title: 'Javascript Game',
-        tech: ['Javascript', 'HTML', 'CSS', 'Heroku'],
-        description: 'the stuff i did',
-        links: {
-          github: 'https://github.com/DaveMitten/wdi-project-1',
-          web: 'https://stark-cliffs-60304.herokuapp.com/',
-        },
-      },
-      {
-        title: 'Vegan Chef',
-        tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
-        description: 'the stuff i did',
-        links: {
-          github: 'https://github.com/DaveMitten/WHATSYOURBEEF',
-          web: 'https://veganchef-dmitten.herokuapp.com/',
-        },
-      },
-      {
-        title: 'Ask A Question',
-        tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
-        description: 'the stuff i did',
-        links: {
-          github: 'https://github.com/DaveMitten/wdi-project-2',
-          web: 'https://shielded-sea-54903.herokuapp.com/',
-        },
-      },
+    // const projectData = [
+    //   {
+    //     title: 'Note App',
+    //     tech: ['Javascript', 'React', 'HTML', 'CSS', 'Slate JS', 'Netlify'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       github: 'https://github.com/DaveMitten/note_app',
+    //       web: 'https://awesome-raman-4a10cc.netlify.com/',
+    //     },
+    //   },
+    //   {
+    //     title: 'Lifestyle',
+    //     tech: ['Javascript', 'React', 'HTML', 'CSS'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       github: 'https://github.com/DaveMitten/k_and_d_proj_new',
+    //       web: '#',
+    //     },
+    //   },
+    //   {
+    //     title: 'Javascript Game',
+    //     tech: ['Javascript', 'HTML', 'CSS', 'Heroku'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       github: 'https://github.com/DaveMitten/wdi-project-1',
+    //       web: 'https://stark-cliffs-60304.herokuapp.com/',
+    //     },
+    //   },
+    //   {
+    //     title: 'Vegan Chef',
+    //     tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       github: 'https://github.com/DaveMitten/WHATSYOURBEEF',
+    //       web: 'https://veganchef-dmitten.herokuapp.com/',
+    //     },
+    //   },
+    //   {
+    //     title: 'Ask A Question',
+    //     tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       github: 'https://github.com/DaveMitten/wdi-project-2',
+    //       web: 'https://shielded-sea-54903.herokuapp.com/',
+    //     },
+    //   },
 
-      {
-        title: 'Magic 8 Ball',
-        tech: ['Javascript', 'React', 'HTML', 'CSS', 'Netlify'],
-        description: 'the stuff i did',
-        links: {
-          github: 'https://github.com/DaveMitten/magic-8-ball',
-          web: 'WIP (work in progress)',
-        },
-      },
+    //   {
+    //     title: 'Magic 8 Ball',
+    //     tech: ['Javascript', 'React', 'HTML', 'CSS', 'Netlify'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       github: 'https://github.com/DaveMitten/magic-8-ball',
+    //       web: 'WIP (work in progress)',
+    //     },
+    //   },
 
-      {
-        title: 'Fruit Machine Game',
-        tech: ['Javascript', 'React', 'HTML', 'CSS', 'Slate JS', 'Netlify'],
-        description: 'the stuff i did',
-        links: {
-          bitbucket: 'https://bitbucket.org/DaveMitten/davidjamesmitten/',
-          web: 'https://angry-dijkstra-9097e8.netlify.com',
-        },
-      },
-    ]
+    //   {
+    //     title: 'Fruit Machine Game',
+    //     tech: ['Javascript', 'React', 'HTML', 'CSS', 'Slate JS', 'Netlify'],
+    //     description: 'the stuff i did',
+    //     links: {
+    //       bitbucket: 'https://bitbucket.org/DaveMitten/davidjamesmitten/',
+    //       web: 'https://angry-dijkstra-9097e8.netlify.com',
+    //     },
+    //   },
+    // ]
 
     const projectDataDec2019 = [
       {
@@ -119,8 +119,6 @@ class Projects extends Component {
 
     const projectsStyle = {
       overflow: 'auto',
-
-      padding: '15px',
       marginBottom: '20',
     }
 
@@ -129,19 +127,15 @@ class Projects extends Component {
         <h2 style={{ borderBottom: '2px solid black' }}>Projects</h2>
         <div style={projectsStyle}>
           {projectDataDec2019.map((data, key) => (
-            <div key={data.id}>
-              <h3>{data.title}</h3>
+            <div 
+            data-aos={key%2 == 0 ? "fade-right" : "fade-left"}
+            data-aos-duration="1000" key={data.id}>
+              <h3 >{data.title}</h3>
               <p>{data.description}</p>
               <div>
                 <div style={{ display: 'inline-flex' }}>
                   {data.tech.map((tech, i, arr) => {
-                    {/* if (arr.length - 1 === i) { */}
-                      {/* return <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div> */}
-                    {/* } else { */}
-                      {/* return <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div> */}
-
-                    {/* } */}
-                    <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div>
+                    return <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div>
                   })}
                 </div>
               </div>
@@ -160,7 +154,6 @@ class Projects extends Component {
               </div>
             </div>
           ))}
-          {console.log(projectData)}
         </div>
       </div>
     )

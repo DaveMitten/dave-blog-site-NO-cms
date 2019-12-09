@@ -17,7 +17,9 @@ class Layout extends React.Component {
           justifyContent: 'center',
 
         }}>
-          <h1
+          <h1 
+          data-aos="zoom-in" 
+          data-aos-duration="1000"
             style={{
               ...scale(1.5),
               marginBottom: rhythm(1.5),
