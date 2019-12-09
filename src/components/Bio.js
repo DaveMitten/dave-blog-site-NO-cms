@@ -1,4 +1,7 @@
 import React from 'react'
+// import AOS from 'aos';
+
+// import 'aos/dist/aos.css'
 
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -9,12 +12,12 @@ import TechUsed from '../components/TechUsed'
 // import { rhythm } from '../utils/typography'
 
 function Bio() {
-
   // const proj = useRef(null);
   // const projSection =  this.proj.current;
   // const blg = useRef(null);
   // const blgSection =  this.blg.current;
   // onClick={() => projSection.scrollIntoView()}
+  // AOS.refresh()
   return (
     <StaticQuery
       query={bioQuery}
@@ -44,8 +47,11 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            <div data-aos="zoom-in" data-aos-duration="1000"
-              style={{ marginBottom: 40 }}>
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              style={{ marginBottom: 40 }}
+            >
               {/* Hi, I am <strong>{author}</strong>.  */}
               <br />I live and work in <strong>London</strong> currently, but I
               love to travel when I can.
@@ -68,7 +74,7 @@ function Bio() {
                   message
                 </a>
                 .
-              {/* </div>
+                {/* </div>
               <div>If you're interested, you can take a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
               </div>
               {/* <button
@@ -76,7 +82,7 @@ function Bio() {
             >
               <div className='buttonInnerStyle'>Projects</div>
             </button> */}
-            <TechUsed />
+              <TechUsed />
               <div
                 style={{
                   display: 'flex',
@@ -95,8 +101,11 @@ function Bio() {
                 >
                   {/* Projects */}
                 </div>
-                <div className="bounce" style={{ textAlign: 'center', width: '20%' }}>
-                  <span >&#8595;</span>
+                <div
+                  className="bounce"
+                  style={{ textAlign: 'center', width: '20%' }}
+                >
+                  <span>&#8595;</span>
                 </div>
                 <div
                   style={{
@@ -104,7 +113,6 @@ function Bio() {
                     width: '40%',
                     textAlign: 'center',
                   }}
-
                 >
                   {/* Blog */}
                 </div>
@@ -119,7 +127,6 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-  
     site {
       siteMetadata {
         author
@@ -137,4 +144,4 @@ const bioQuery = graphql`
 //     }
 //   }
 // }
-export default Bio;
+export default Bio

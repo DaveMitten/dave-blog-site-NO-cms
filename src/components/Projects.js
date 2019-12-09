@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 // // import { StaticQuery, graphql } from 'gatsby'
 // // import Image from 'gatsby-image'
+// import AOS from 'aos';
+
+// import 'aos/dist/aos.css'
 
 class Projects extends Component {
+
   render() {
+    // AOS.refresh()
+
     // const projectData = [
     //   {
     //     title: 'Note App',
@@ -75,8 +81,18 @@ class Projects extends Component {
     const projectDataDec2019 = [
       {
         title: 'Alqami data maturity journey',
-        tech: ['ES6', 'Javascript', 'HTML', 'CSS', 'SASS', 'fullpage.js', 'AOS', 'tippy.js'],
-        description: 'Constructed a data maturity journey following a design. It uses various libraries along with sass and javascript. Custom animations. Custom modal (not included in site). No framework used.',
+        tech: [
+          'ES6',
+          'Javascript',
+          'HTML',
+          'CSS',
+          'SASS',
+          'fullpage.js',
+          'AOS',
+          'tippy.js',
+        ],
+        description:
+          'Constructed a data maturity journey following a design. It uses various libraries along with sass and javascript. Custom animations. Custom modal (not included in site). No framework used.',
         links: {
           web: 'https://www.alqami.com/working-with-us/',
         },
@@ -84,7 +100,8 @@ class Projects extends Component {
       {
         title: 'Kadiem Landing page',
         tech: ['ES6', 'Javascript', 'HTML', 'CSS'],
-        description: 'A landing page using javascript without frameworks. Implemented using a designers plan.',
+        description:
+          'A landing page using javascript without frameworks. Implemented using a designers plan.',
         links: {
           web: 'https://www.kadiemgroup.com/',
         },
@@ -92,29 +109,46 @@ class Projects extends Component {
       {
         title: 'Beatchain - Launchpad',
         tech: ['ES6', 'react', 'redux', 'Javascript', 'HTML', 'CSS3', 'SASS'],
-        description: 'Was in charge of the development of the launchpad. I built the modal and all logic that went with. I also maintained and added features through this area.',
+        description:
+          'Was in charge of the development of the launchpad. I built the modal and all logic that went with. I also maintained and added features through this area.',
         links: {
           web: 'https://www.beatchain.com/',
         },
       },
       {
         title: 'Tails.com',
-        tech: ['ES6', ' Javascript', 'Python-templates', ' HTML', ' CSS', ' SASS'],
-        description: 'Helped the development and marketing teams with conversion from English to French for their move into the French market and helped the marketing team with implementing A/B testing. This was for the home page and sign-up journey ',
+        tech: [
+          'ES6',
+          ' Javascript',
+          'Python-templates',
+          ' HTML',
+          ' CSS',
+          ' SASS',
+        ],
+        description:
+          'Helped the development and marketing teams with conversion from English to French for their move into the French market and helped the marketing team with implementing A/B testing. This was for the home page and sign-up journey ',
         links: {
           web: 'https://tails.com/',
         },
       },
       {
         title: 'Currikula',
-        tech: ['ES6', ' Javascript', ' React', ' Context API', ' HTML', ' CSS', ' SASS', ' Ant-D'],
-        description: 'Created a site with the CTO from the ground up using react and Ant-D styling framework. The site was created as the second version.',
+        tech: [
+          'ES6',
+          ' Javascript',
+          ' React',
+          ' Context API',
+          ' HTML',
+          ' CSS',
+          ' SASS',
+          ' Ant-D',
+        ],
+        description:
+          'Created a site with the CTO from the ground up using react and Ant-D styling framework. The site was created as the second version.',
         links: {
           web: 'https://version-2.currikula.com/',
         },
       },
-
-
     ]
 
     const projectsStyle = {
@@ -127,21 +161,34 @@ class Projects extends Component {
         <h2 style={{ borderBottom: '2px solid black' }}>Projects</h2>
         <div style={projectsStyle}>
           {projectDataDec2019.map((data, key) => (
-            <div 
-            data-aos={key%2 == 0 ? "fade-right" : "fade-left"}
-            data-aos-duration="1000" key={data.id}>
-              <h3 >{data.title}</h3>
+            <div
+              data-aos={key % 2 == 0 ? 'fade-right' : 'fade-left'}
+              data-aos-duration="1000"
+              key={data.id}
+            >
+              <h3>{data.title}</h3>
               <p>{data.description}</p>
               <div>
                 <div style={{ display: 'inline-flex' }}>
                   {data.tech.map((tech, i, arr) => {
-                    return <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div>
+                    return (
+                      <div
+                        key={i}
+                        style={{
+                          marginRight: '5px',
+                          border: '2px solid #8C52FC',
+                          padding: '2px 4px',
+                        }}
+                      >
+                        {tech}
+                      </div>
+                    )
                   })}
                 </div>
               </div>
               <div>
                 <strong>{data.links.github ? 'Github:' : ''} </strong>
-                <strong>{data.links.bitbucket ? 'Bitbucket: ': ''} </strong>
+                <strong>{data.links.bitbucket ? 'Bitbucket: ' : ''} </strong>
                 <a href={data.links.github} target="_blank">
                   {data.links.github || data.links.bitbucket}
                 </a>

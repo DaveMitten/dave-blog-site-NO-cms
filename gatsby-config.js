@@ -3,7 +3,7 @@ module.exports = {
     title: `Dave`,
     author: `David James Mitten`,
     description: `Personal Website and Blog for David James Mitten`,
-    siteUrl: ``,
+    siteUrl: `https://www.davidjamesmitten.com`,
     social: {
       twitter: `DavidJamesMitt1`
         },
