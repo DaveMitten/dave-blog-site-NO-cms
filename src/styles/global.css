@@ -3,7 +3,7 @@ body{
   cursor: default;
 }
 a{
-	color: #007acc;
+	color: #8C52FC;
 
 }
 
@@ -17,7 +17,7 @@ a{
 }
 
 .buttonInnerStyle:hover {
-  background-color: #007acc;
+  background-color: #8C52FC;
   transition: 0.2s;
   color: white;
 }
@@ -29,7 +29,7 @@ a{
 }
 
 .aLinkStyle:hover {
-  background-color: #007acc;
+  background-color: #8C52FC;
   color: white;
   transition: 0.1s;
 }
@@ -39,7 +39,7 @@ a{
 
 #___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3, 
 #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a, #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a {
-	color: #007acc;
+	color: #8C52FC;
 	border-radius: 5px;
 	box-shadow: none;
 	padding: 4px;
@@ -49,7 +49,7 @@ a{
 
 #___gatsby > div > div > div:nth-child(3) > div:nth-child(n) > h3:hover, 
 #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a:hover, #___gatsby > div > div > div:nth-child(n) > div > div:nth-child(n) > div:nth-child(n) > a:hover{
-	background-color: #007acc;
+	background-color: #8C52FC;
 	color: white;
 	transition: 0.1s;
 	width: fit-content;

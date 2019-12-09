@@ -72,6 +72,51 @@ class Projects extends Component {
       },
     ]
 
+    const projectDataDec2019 = [
+      {
+        title: 'Alqami data maturity journey',
+        tech: ['ES6', 'Javascript', 'HTML', 'CSS', 'SASS', 'fullpage.js', 'AOS', 'tippy.js'],
+        description: 'Constructed a data maturity journey following a design. It uses various libraries along with sass and javascript. Custom animations. Custom modal (not included in site). No framework used.',
+        links: {
+          web: 'https://www.alqami.com/working-with-us/',
+        },
+      },
+      {
+        title: 'Kadiem Landing page',
+        tech: ['ES6', 'Javascript', 'HTML', 'CSS'],
+        description: 'A landing page using javascript without frameworks. Implemented using a designers plan.',
+        links: {
+          web: 'https://www.kadiemgroup.com/',
+        },
+      },
+      {
+        title: 'Beatchain - Launchpad',
+        tech: ['ES6', 'react', 'redux', 'Javascript', 'HTML', 'CSS3', 'SASS'],
+        description: 'Was in charge of the development of the launchpad. I built the modal and all logic that went with. I also maintained and added features through this area.',
+        links: {
+          web: 'https://www.beatchain.com/',
+        },
+      },
+      {
+        title: 'Tails.com',
+        tech: ['ES6', ' Javascript', 'Python-templates', ' HTML', ' CSS', ' SASS'],
+        description: 'Helped the development and marketing teams with conversion from English to French for their move into the French market and helped the marketing team with implementing A/B testing. This was for the home page and sign-up journey ',
+        links: {
+          web: 'https://tails.com/',
+        },
+      },
+      {
+        title: 'Currikula',
+        tech: ['ES6', ' Javascript', ' React', ' Context API', ' HTML', ' CSS', ' SASS', ' Ant-D'],
+        description: 'Created a site with the CTO from the ground up using react and Ant-D styling framework. The site was created as the second version.',
+        links: {
+          web: 'https://version-2.currikula.com/',
+        },
+      },
+
+
+    ]
+
     const projectsStyle = {
       overflow: 'auto',
 
@@ -83,23 +128,26 @@ class Projects extends Component {
       <div>
         <h2 style={{ borderBottom: '2px solid black' }}>Projects</h2>
         <div style={projectsStyle}>
-          {projectData.map((data, key) => (
+          {projectDataDec2019.map((data, key) => (
             <div key={data.id}>
               <h3>{data.title}</h3>
+              <p>{data.description}</p>
               <div>
-                <strong>Tech used: </strong>
                 <div style={{ display: 'inline-flex' }}>
                   {data.tech.map((tech, i, arr) => {
-                    if (arr.length - 1 === i) {
-                      return <div key={i}>{tech}.</div>
-                    } else {
-                      return <div key={i}>{`${tech}, `}</div>
-                    }
+                    {/* if (arr.length - 1 === i) { */}
+                      {/* return <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div> */}
+                    {/* } else { */}
+                      {/* return <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div> */}
+
+                    {/* } */}
+                    <div key={i} style={{ marginRight: '5px', border: '2px solid #8C52FC', padding: '2px 4px' }}>{tech}</div>
                   })}
                 </div>
               </div>
               <div>
-                <strong>{data.links.github ? 'Github:' : 'Bitbucket:'} </strong>
+                <strong>{data.links.github ? 'Github:' : ''} </strong>
+                <strong>{data.links.bitbucket ? 'Bitbucket: ': ''} </strong>
                 <a href={data.links.github} target="_blank">
                   {data.links.github || data.links.bitbucket}
                 </a>

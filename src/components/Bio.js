@@ -4,7 +4,49 @@ import { StaticQuery, graphql } from 'gatsby'
 
 // import { rhythm } from '../utils/typography'
 
-export default function Bio() {
+function Bio() {
+
+  // const proj = useRef(null);
+  // const projSection =  this.proj.current;
+  // const blg = useRef(null);
+  // const blgSection =  this.blg.current;
+  // onClick={() => projSection.scrollIntoView()}
+
+//   const bounce = {
+//     animation: bounceKeyFrame 1s infinite alternate;
+//     WebkitTransition: bounceKeyFrameWeb 1s infinite alternate;
+//   }
+
+//   const bounceKeyFrame = `
+//   @keyframes bounce {
+//     from {
+//       transform: translateY(0px);
+//     }
+//     to {
+//       transform: translateY(-15px);
+//     }
+//   }
+//   @-webkit-keyframes bounce {
+//     from {
+//       transform: translateY(0px);
+//     }
+//     to {
+//       transform: translateY(-15px);
+//     }
+//   }
+// `
+//   const bounceKeyFrameWeb = `
+//   @-webkit-keyframes bounce {
+//     from {
+//       transform: translateY(0px);
+//     }
+//     to {
+//       transform: translateY(-15px);
+//     }
+//   }`
+
+
+
   return (
     <StaticQuery
       query={bioQuery}
@@ -16,7 +58,8 @@ export default function Bio() {
               display: `flex`,
               /* marginBottom: rhythm(2.5), */
               flexDirection: `column`,
-              height: '700px',
+              alignItems: `center`,
+              height: '100vh',
             }}
           >
             {/* <Image
@@ -56,15 +99,7 @@ export default function Bio() {
                 </a>
                 .
               {/* </div>
-              <div>If you're interested, you cantake a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
-                <br />
-                <div>
-                  {' '}
-                  This site was created using{' '}
-                  <a className="aLinkStyle" href="https://www.gatsbyjs.org/">
-                    Gatsby JS
-                </a>
-                </div>
+              <div>If you're interested, you can take a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
               </div>
               {/* <button
               className='buttonStyle'
@@ -77,6 +112,7 @@ export default function Bio() {
                   flexDirection: 'row',
                   height: '1px',
                   marginTop: '50px',
+                  alignItems: 'center',
                 }}
               >
                 <div
@@ -86,9 +122,9 @@ export default function Bio() {
                     textAlign: 'center',
                   }}
                 >
-                  Projects
-              </div>
-                <div style={{ textAlign: 'center', width: '20%' }}>
+                  {/* Projects */}
+                </div>
+                <div  style={{ textAlign: 'center', width: '20%' }}>
                   <span>&#8595;</span>
                 </div>
                 <div
@@ -97,26 +133,22 @@ export default function Bio() {
                     width: '40%',
                     textAlign: 'center',
                   }}
+
                 >
-                  Blog
-              </div>
+                  {/* Blog */}
+                </div>
               </div>
             </div>
-            )
-          }}
-        />
-      )
-    }
-    
-{/* const bioQuery = graphql`
+          </div>
+        )
+      }}
+    />
+  )
+}
+
+const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
+  
     site {
       siteMetadata {
         author
@@ -125,6 +157,13 @@ export default function Bio() {
         }
       }
     }
-  }` */}
-
-
+  }
+`
+// avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+//   childImageSharp {
+//     fixed(width: 50, height: 50) {
+//       ...GatsbyImageSharpFixed
+//     }
+//   }
+// }
+export default Bio;
