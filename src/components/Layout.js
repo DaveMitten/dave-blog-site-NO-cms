@@ -15,7 +15,7 @@ class Layout extends React.Component {
           display: `flex`,
           alignItems: `center`,
           justifyContent: 'center',
-
+          textAlign: `center`,
         }}>
           <h1 
           data-aos="zoom-in" 
