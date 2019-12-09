@@ -111,3 +111,8 @@ a {
   flex-wrap: wrap;
   margin: 50px 0;
 }
+.tagContainer  {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}

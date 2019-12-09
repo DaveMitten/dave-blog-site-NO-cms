@@ -169,12 +169,13 @@ class Projects extends Component {
               <h3>{data.title}</h3>
               <p>{data.description}</p>
               <div>
-                <div style={{ display: 'inline-flex' }}>
+                <div class="tagContainer">
                   {data.tech.map((tech, i, arr) => {
                     return (
                       <div
                         key={i}
                         style={{
+                          marginTop: '5px',
                           marginRight: '5px',
                           border: '2px solid #8C52FC',
                           padding: '2px 4px',

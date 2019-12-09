@@ -1,10 +1,7 @@
 import React from 'react'
 // import AOS from 'aos';
-
 // import 'aos/dist/aos.css'
-
 import { StaticQuery, graphql } from 'gatsby'
-
 import TechUsed from '../components/TechUsed'
 
 // import Image from 'gatsby-image'
@@ -30,7 +27,7 @@ function Bio() {
               /* marginBottom: rhythm(2.5), */
               flexDirection: `column`,
               alignItems: `center`,
-              height: '100vh',
+              minHeight: '80vh',
               textAlign: 'center',
             }}
           >
