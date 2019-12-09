@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Dave`,
     author: `David James Mitten`,
-    description: `Personal Blog for David James Mitten`,
-    siteUrl: ``,
+    description: `Personal Website and Blog for David James Mitten`,
+    siteUrl: `https://www.davidjamesmitten.com`,
     social: {
       twitter: `DavidJamesMitt1`
         },
@@ -16,13 +16,7 @@ module.exports = {
         name: `blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
+ 
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -63,7 +57,6 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-offline`,

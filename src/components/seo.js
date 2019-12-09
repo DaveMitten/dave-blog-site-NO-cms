@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+// import AOS from 'aos';
+
+// import 'aos/dist/aos.css'
 
 function SEO({ description, lang, meta, keywords, title }) {
+  // AOS.refresh()
   return (
     <StaticQuery
       query={detailsQuery}
@@ -54,13 +58,21 @@ function SEO({ description, lang, meta, keywords, title }) {
               .concat(
                 keywords.length > 0
                   ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <link
+              rel="stylesheet"
+              href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+            ></link>
+            {/* <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
+
+          </Helmet>
         )
       }}
     />
@@ -85,12 +97,12 @@ export default SEO
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    site {
-      siteMetadata {
-        title
+              site {
+              siteMetadata {
+              title
         description
-        author
+            author
+          }
+        }
       }
-    }
-  }
-`
+    `

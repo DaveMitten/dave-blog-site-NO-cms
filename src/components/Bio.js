@@ -1,10 +1,23 @@
 import React from 'react'
+// import AOS from 'aos';
+
+// import 'aos/dist/aos.css'
+
 import { StaticQuery, graphql } from 'gatsby'
+
+import TechUsed from '../components/TechUsed'
+
 // import Image from 'gatsby-image'
 
 // import { rhythm } from '../utils/typography'
 
-export default function Bio() {
+function Bio() {
+  // const proj = useRef(null);
+  // const projSection =  this.proj.current;
+  // const blg = useRef(null);
+  // const blgSection =  this.blg.current;
+  // onClick={() => projSection.scrollIntoView()}
+  // AOS.refresh()
   return (
     <StaticQuery
       query={bioQuery}
@@ -16,7 +29,9 @@ export default function Bio() {
               display: `flex`,
               /* marginBottom: rhythm(2.5), */
               flexDirection: `column`,
-              height: '700px',
+              alignItems: `center`,
+              height: '100vh',
+              textAlign: 'center',
             }}
           >
             {/* <Image
@@ -32,7 +47,11 @@ export default function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            <div style={{ marginBottom: 40 }}>
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              style={{ marginBottom: 40 }}
+            >
               {/* Hi, I am <strong>{author}</strong>.  */}
               <br />I live and work in <strong>London</strong> currently, but I
               love to travel when I can.
@@ -55,28 +74,22 @@ export default function Bio() {
                   message
                 </a>
                 .
-              {/* </div>
-              <div>If you're interested, you cantake a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
-                <br />
-                <div>
-                  {' '}
-                  This site was created using{' '}
-                  <a className="aLinkStyle" href="https://www.gatsbyjs.org/">
-                    Gatsby JS
-                </a>
-                </div>
+                {/* </div>
+              <div>If you're interested, you can take a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
               </div>
               {/* <button
               className='buttonStyle'
             >
               <div className='buttonInnerStyle'>Projects</div>
             </button> */}
+              <TechUsed />
               <div
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
                   height: '1px',
                   marginTop: '50px',
+                  alignItems: 'center',
                 }}
               >
                 <div
@@ -86,9 +99,12 @@ export default function Bio() {
                     textAlign: 'center',
                   }}
                 >
-                  Projects
-              </div>
-                <div style={{ textAlign: 'center', width: '20%' }}>
+                  {/* Projects */}
+                </div>
+                <div
+                  className="bounce"
+                  style={{ textAlign: 'center', width: '20%' }}
+                >
                   <span>&#8595;</span>
                 </div>
                 <div
@@ -98,25 +114,19 @@ export default function Bio() {
                     textAlign: 'center',
                   }}
                 >
-                  Blog
-              </div>
+                  {/* Blog */}
+                </div>
               </div>
             </div>
-            )
-          }}
-        />
-      )
-    }
-    
-{/* const bioQuery = graphql`
+          </div>
+        )
+      }}
+    />
+  )
+}
+
+const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author
@@ -125,6 +135,13 @@ export default function Bio() {
         }
       }
     }
-  }` */}
-
-
+  }
+`
+// avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+//   childImageSharp {
+//     fixed(width: 50, height: 50) {
+//       ...GatsbyImageSharpFixed
+//     }
+//   }
+// }
+export default Bio

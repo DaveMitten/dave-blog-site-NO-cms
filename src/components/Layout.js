@@ -2,33 +2,50 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
+// import AOS from 'aos';
+
+// import 'aos/dist/aos.css'
 
 class Layout extends React.Component {
+  
+ 
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+    // AOS.refresh()
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
+        <div
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
+            display: `flex`,
+            alignItems: `center`,
+            justifyContent: 'center',
+            textAlign: `center`,
           }}
         >
-          <Link
+          <h1
+            data-aos="zoom-in"
+            data-aos-duration="1000"
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              ...scale(1.5),
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
             }}
-            to={`/`}
           >
-            Hi, <br />I'm {title}
-          </Link>
-        </h1>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              Hi, I'm {title}.
+            </Link>
+          </h1>
+        </div>
       )
     } else {
       header = (
@@ -46,7 +63,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-         <button className='aLinkStyle'>Home</button>
+            <button className="aLinkStyle">Home</button>
           </Link>
         </h3>
       )
@@ -62,11 +79,7 @@ class Layout extends React.Component {
       >
         {header}
         {children}
-        <footer >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a  className='aLinkStyle' href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer />
       </div>
     )
   }
