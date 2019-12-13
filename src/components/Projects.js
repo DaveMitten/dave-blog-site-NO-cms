@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade';
+
 // // import { StaticQuery, graphql } from 'gatsby'
 // // import Image from 'gatsby-image'
-// import AOS from 'aos';
 
-// import 'aos/dist/aos.css'
 
 class Projects extends Component {
 
@@ -161,9 +161,7 @@ class Projects extends Component {
         <h2 style={{ borderBottom: '2px solid black' }}>Projects</h2>
         <div style={projectsStyle}>
           {projectDataDec2019.map((data, key) => (
-            <div
-              data-aos={key % 2 == 0 ? 'fade-right' : 'fade-left'}
-              data-aos-duration="1000"
+            <Fade left
               key={data.id}
             >
               <h3>{data.title}</h3>
@@ -200,7 +198,7 @@ class Projects extends Component {
                   {data.links.web}
                 </a>
               </div>
-            </div>
+            </Fade>
           ))}
         </div>
       </div>
