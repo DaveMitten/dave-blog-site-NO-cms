@@ -8,7 +8,6 @@ import Fade from 'react-reveal/Fade';
 class Projects extends Component {
 
   render() {
-    // AOS.refresh()
 
     // const projectData = [
     //   {
@@ -157,7 +156,7 @@ class Projects extends Component {
     }
 
     return (
-      <div>
+      <div ref={(section) => { this.ProjectScroll = section; }}>
         <h2 style={{ borderBottom: '2px solid black' }}>Projects</h2>
         <div style={projectsStyle}>
           {projectDataDec2019.map((data, key) => (
@@ -170,6 +169,7 @@ class Projects extends Component {
                 <div class="tagContainer">
                   {data.tech.map((tech, i, arr) => {
                     return (
+                      <Fade delay={1000}>
                       <div
                         key={i}
                         style={{
@@ -181,6 +181,7 @@ class Projects extends Component {
                       >
                         {tech}
                       </div>
+                      </Fade>
                     )
                   })}
                 </div>

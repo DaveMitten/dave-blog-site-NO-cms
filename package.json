@@ -28,6 +28,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-reveal": "^1.2.2",
+    "react-scroll-to-component": "^1.0.2",
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",

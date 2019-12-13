@@ -1,22 +1,18 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade';
+import scrollToComponent from 'react-scroll-to-component';
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'
+
 import { StaticQuery, graphql } from 'gatsby'
 import TechUsed from '../components/TechUsed'
 
-// import Image from 'gatsby-image'
-
-// import { rhythm } from '../utils/typography'
 
 function Bio() {
-  // const proj = useRef(null);
-  // const projSection =  this.proj.current;
-  // const blg = useRef(null);
-  // const blgSection =  this.blg.current;
-  // onClick={() => projSection.scrollIntoView()}
-  // AOS.refresh()
+
+    // scrollToComponent(this.BlogScroll, { offset: 0, align: 'middle', duration: 500, ease: 'inCirc' });
+    // scrollToComponent(this.ProjectScroll, { offset: 0, align: 'middle', duration: 500, ease: 'inCirc' });
+
+
   return (
     <StaticQuery
       query={bioQuery}
@@ -26,26 +22,13 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              /* marginBottom: rhythm(2.5), */
               flexDirection: `column`,
               alignItems: `center`,
               minHeight: '80vh',
               textAlign: 'center',
             }}
           >
-            {/* <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            /> */}
+
             <Fade duration={3000}>
               <div
                 style={{ marginBottom: 40 }}
@@ -71,14 +54,8 @@ function Bio() {
                     message
                 </a>
                   .
-                {/* </div>
-              <div>If you're interested, you can take a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
                 </div>
-                {/* <button
-              className='buttonStyle'
-            >
-              <div className='buttonInnerStyle'>Projects</div>
-            </button> */}
+
                 <TechUsed />
                 <div
                   style={{
@@ -90,6 +67,12 @@ function Bio() {
                   }}
                 >
                   <div
+                    /* onClick={() => {
+                      scrollToComponent(this.ProjectScroll,
+                        { offset: 0, align: 'bottom', duration: 500, ease: 'inExpo' }
+                      );
+                    }} */
+
                     style={{
                       borderBottom: '2px dashed black',
                       width: '40%',
@@ -105,6 +88,12 @@ function Bio() {
                     <span>&#8595;</span>
                   </div>
                   <div
+                    /* onClick={() => {
+                      scrollToComponent(this.BlogScroll,
+                        { offset: 0, align: 'bottom', duration: 500, ease: 'inExpo' }
+                      );
+                    }
+                    } */
                     style={{
                       borderBottom: '2px dashed black',
                       width: '40%',
@@ -116,7 +105,7 @@ function Bio() {
                 </div>
               </div>
             </Fade>
-          </div>
+          </div >
         )
       }}
     />
