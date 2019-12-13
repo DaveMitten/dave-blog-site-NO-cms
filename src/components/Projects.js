@@ -37,7 +37,7 @@ class Projects extends Component {
     //       web: 'https://stark-cliffs-60304.herokuapp.com/',
     //     },
     //   },
-    //   {
+    //   { 
     //     title: 'Vegan Chef',
     //     tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
     //     description: 'the stuff i did',
