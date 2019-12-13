@@ -1,4 +1,6 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade';
+
 import { Link, graphql } from 'gatsby'
 
 // import classNames from 'classnames';
@@ -47,28 +49,29 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  key={node.fields.slug}
-                >
-                  {console.log('node.fields.slug', node)}
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
+
+                  <div
+
+
+                    key={node.fields.slug}
                   >
-                    <Link
-                      className="aLinkStyle"
-                      style={{ boxShadow: `none` }}
-                      to={node.fields.slug}
+                    {console.log('node.fields.slug', node)}
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
                     >
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </div>
+                      <Link
+                        className="aLinkStyle"
+                        style={{ boxShadow: `none` }}
+                        to={node.fields.slug}
+                      >
+                        {title}
+                      </Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  </div>
               )
             })}
           </div>

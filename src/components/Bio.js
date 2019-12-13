@@ -1,4 +1,6 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade';
+
 // import AOS from 'aos';
 // import 'aos/dist/aos.css'
 import { StaticQuery, graphql } from 'gatsby'
@@ -44,77 +46,76 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             /> */}
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              style={{ marginBottom: 40 }}
-            >
-              {/* Hi, I am <strong>{author}</strong>.  */}
-              <br />I live and work in <strong>London</strong> currently, but I
-              love to travel when I can.
+            <Fade duration={3000}>
+              <div
+                style={{ marginBottom: 40 }}
+              >
+                <br />I live and work in <strong>London</strong> currently, but I
+                love to travel when I can.
               <br />I make frontends.
               <br />
-              Currently using <strong>React</strong> as my primary Language
-              library/framework.
+                Currently using <strong>React</strong> as my primary Language
+                library/framework.
               <br />
-              <br />
-              <div>
-                You should follow me on{' '}
-                <a
-                  className="aLinkStyle"
-                  href={`https://twitter.com/${social.twitter}`}
-                >
-                  Twitter
+                <br />
+                <div>
+                  You should follow me on{' '}
+                  <a
+                    className="aLinkStyle"
+                    href={`https://twitter.com/${social.twitter}`}
+                  >
+                    Twitter
                 </a>{' '}
-                or drop me a{' '}
-                <a className="aLinkStyle" href="mailto:davidmitten88@gmail.com">
-                  message
+                  or drop me a{' '}
+                  <a className="aLinkStyle" href="mailto:davidmitten88@gmail.com">
+                    message
                 </a>
-                .
+                  .
                 {/* </div>
               <div>If you're interested, you can take a peak at my <a href="../content/assets/cv.pdf">cv</a>.</div> */}
-              </div>
-              {/* <button
+                </div>
+                {/* <button
               className='buttonStyle'
             >
               <div className='buttonInnerStyle'>Projects</div>
             </button> */}
-              <TechUsed />
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  height: '1px',
-                  marginTop: '50px',
-                  alignItems: 'center',
-                }}
-              >
+                <TechUsed />
                 <div
                   style={{
-                    borderBottom: '2px dashed black',
-                    width: '40%',
-                    textAlign: 'center',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    height: '1px',
+                    marginTop: '50px',
+                    alignItems: 'center',
                   }}
                 >
-                  {/* Projects */}
-                </div>
-                <div
-                  className="bounce"
-                  style={{ textAlign: 'center', width: '20%' }}
-                >
-                  <span>&#8595;</span>
-                </div>
-                <div
-                  style={{
-                    borderBottom: '2px dashed black',
-                    width: '40%',
-                    textAlign: 'center',
-                  }}
-                >
-                  {/* Blog */}
+                  <div
+                    style={{
+                      borderBottom: '2px dashed black',
+                      width: '40%',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {/* Projects */}
+                  </div>
+                  <div
+                    className="bounce"
+                    style={{ textAlign: 'center', width: '20%' }}
+                  >
+                    <span>&#8595;</span>
+                  </div>
+                  <div
+                    style={{
+                      borderBottom: '2px dashed black',
+                      width: '40%',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {/* Blog */}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Fade>
           </div>
         )
       }}
