@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 export default function TechUsed() {
 	return (
-		<Fade delay={500}>
+		<Fade delay={1250}>
 			<div className="iconContainer">
 				<i
 					data-aos="zoom-in"

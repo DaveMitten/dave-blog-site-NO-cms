@@ -29,7 +29,7 @@ function Bio() {
             }}
           >
 
-            <Fade duration={3000}>
+            <Fade delay={1000} duration={3000}>
               <div
                 style={{ marginBottom: 40 }}
               >
