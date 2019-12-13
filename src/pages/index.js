@@ -1,11 +1,8 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade';
+
 import { Link, graphql } from 'gatsby'
 
-// import classNames from 'classnames';
-// import { Watch } from 'scrollmonitor-react';
-// import AOS from 'aos';
-
-// import 'aos/dist/aos.css'
 
 
 
@@ -18,7 +15,6 @@ import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
-    // AOS.init();
 
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -40,35 +36,36 @@ class BlogIndex extends React.Component {
 
         <Bio />
         <Projects />
-        <div style={{ margin: 'auto' }}>
+        
+        <div ref={(section) => { this.BlogScroll = section; }} style={{ margin: 'auto' }}>
           <h2 style={{ borderBottom: '2px solid black' }}>Blog posts</h2>
 
           <div>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  key={node.fields.slug}
-                >
-                  {console.log('node.fields.slug', node)}
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
+                <Fade right>
+                  <div
+                    key={node.fields.slug}
                   >
-                    <Link
-                      className="aLinkStyle"
-                      style={{ boxShadow: `none` }}
-                      to={node.fields.slug}
+                    {console.log('node.fields.slug', node)}
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
                     >
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                </div>
+                      <Link
+                        className="aLinkStyle"
+                        style={{ boxShadow: `none` }}
+                        to={node.fields.slug}
+                      >
+                        {title}
+                      </Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  </div>
+                </Fade>
               )
             })}
           </div>

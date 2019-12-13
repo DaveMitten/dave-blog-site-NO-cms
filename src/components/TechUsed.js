@@ -1,11 +1,10 @@
 import React from 'react'
-// import AOS from 'aos';
+import Fade from 'react-reveal/Fade';
 
-// import 'aos/dist/aos.css'
+
 export default function TechUsed() {
-	// AOS.refresh()
 	return (
-		<>
+		<Fade delay={1250}>
 			<div className="iconContainer">
 				<i
 					data-aos="zoom-in"
@@ -128,6 +127,6 @@ export default function TechUsed() {
 					className="devicon-chrome-plain"
 				/>
 			</div>
-		</>
+		</Fade>
 	)
 }

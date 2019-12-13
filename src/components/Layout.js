@@ -1,19 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
+import Fade from 'react-reveal/Fade';
 import { rhythm, scale } from '../utils/typography'
-// import AOS from 'aos';
 
-// import 'aos/dist/aos.css'
 
 class Layout extends React.Component {
-  
- 
+
+
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
-    // AOS.refresh()
 
     if (location.pathname === rootPath) {
       header = (
@@ -25,26 +22,28 @@ class Layout extends React.Component {
             textAlign: `center`,
           }}
         >
-          <h1
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            style={{
-              ...scale(1.5),
-              marginBottom: rhythm(1.5),
-              marginTop: 0,
-            }}
-          >
-            <Link
+          <Fade delay={500}>
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
               style={{
-                boxShadow: `none`,
-                textDecoration: `none`,
-                color: `inherit`,
+                ...scale(1.5),
+                marginBottom: rhythm(1.5),
+                marginTop: 0,
               }}
-              to={`/`}
             >
-              Hi, I'm {title}.
+              <Link
+                style={{
+                  boxShadow: `none`,
+                  textDecoration: `none`,
+                  color: `inherit`,
+                }}
+                to={`/`}
+              >
+                Hi, I'm {title}.
             </Link>
-          </h1>
+            </h1>
+          </Fade>
         </div>
       )
     } else {

@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade';
+
 // // import { StaticQuery, graphql } from 'gatsby'
 // // import Image from 'gatsby-image'
-// import AOS from 'aos';
 
-// import 'aos/dist/aos.css'
 
 class Projects extends Component {
 
   render() {
-    // AOS.refresh()
 
     // const projectData = [
     //   {
@@ -38,7 +37,7 @@ class Projects extends Component {
     //       web: 'https://stark-cliffs-60304.herokuapp.com/',
     //     },
     //   },
-    //   {
+    //   { 
     //     title: 'Vegan Chef',
     //     tech: ['Javascript', 'Angular', 'HTML', 'CSS', 'Heroku'],
     //     description: 'the stuff i did',
@@ -157,13 +156,11 @@ class Projects extends Component {
     }
 
     return (
-      <div>
+      <div ref={(section) => { this.ProjectScroll = section; }}>
         <h2 style={{ borderBottom: '2px solid black' }}>Projects</h2>
         <div style={projectsStyle}>
           {projectDataDec2019.map((data, key) => (
-            <div
-              data-aos={key % 2 == 0 ? 'fade-right' : 'fade-left'}
-              data-aos-duration="1000"
+            <Fade left
               key={data.id}
             >
               <h3>{data.title}</h3>
@@ -172,6 +169,7 @@ class Projects extends Component {
                 <div class="tagContainer">
                   {data.tech.map((tech, i, arr) => {
                     return (
+                      <Fade delay={1000}>
                       <div
                         key={i}
                         style={{
@@ -183,6 +181,7 @@ class Projects extends Component {
                       >
                         {tech}
                       </div>
+                      </Fade>
                     )
                   })}
                 </div>
@@ -200,7 +199,7 @@ class Projects extends Component {
                   {data.links.web}
                 </a>
               </div>
-            </div>
+            </Fade>
           ))}
         </div>
       </div>
