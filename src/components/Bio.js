@@ -1,6 +1,6 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade';
-import scrollToComponent from 'react-scroll-to-component';
+// import scrollToComponent from 'react-scroll-to-component';
 
 
 import { StaticQuery, graphql } from 'gatsby'
