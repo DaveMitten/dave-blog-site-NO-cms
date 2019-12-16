@@ -33,13 +33,9 @@ function Bio() {
               <div
                 style={{ marginBottom: 40 }}
               >
+                <br />I am a <strong>Javascript frontend developer</strong>  specialising in <strong>react</strong> and <strong>webpack</strong>
                 <br />I live and work in <strong>London</strong> currently, but I
                 love to travel when I can.
-              <br />I make frontends.
-              <br />
-                Currently using <strong>React</strong> as my primary Language
-                library/framework.
-              <br />
                 <br />
                 <div>
                   You should follow me on{' '}

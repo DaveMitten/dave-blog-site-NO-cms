@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Dave`,
+    title: `Developer`,
     author: `David James Mitten`,
     description: `Personal Website and Blog for David James Mitten`,
     siteUrl: `https://www.davidjamesmitten.com`,

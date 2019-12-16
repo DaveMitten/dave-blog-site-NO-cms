@@ -28,9 +28,9 @@ class BlogIndex extends React.Component {
       marginBottom: '20',
     }
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={'Dave'}>
         <SEO
-          title="All posts"
+          title="David J Mitten"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
 

@@ -109,7 +109,7 @@ class Projects extends Component {
         title: 'Beatchain - Launchpad',
         tech: ['ES6', 'react', 'redux', 'Javascript', 'HTML', 'CSS3', 'SASS'],
         description:
-          'Was in charge of the development of the launchpad. I built the modal and all logic that went with. I also maintained and added features through this area.',
+          'Was in charge of the development of the \'launchpad\' section. I built the modal and all logic that went with. I also maintained and added features through this area.',
         links: {
           web: 'https://www.beatchain.com/',
         },
@@ -143,7 +143,7 @@ class Projects extends Component {
           ' Ant-D',
         ],
         description:
-          'Created a site with the CTO from the ground up using react and Ant-D styling framework. The site was created as the second version.',
+          'Created the Currikula site with a small team from the ground up using react and Ant-D styling framework. The site was created as the second version to the original.',
         links: {
           web: 'https://version-2.currikula.com/',
         },
